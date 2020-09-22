@@ -5,6 +5,8 @@
 // 👇 COMPLETE YOUR WORK BELOW 👇
 */
 
+const { starships } = require("./data/fixtures-bundle");
+
 /**
  * ### Challenge `getName`
  * Example ✅
@@ -16,8 +18,10 @@
 */
 function getName(character) {
   // ⭐️ Example Solution Provided For First Function ⭐️
-  return character.name
+  return character.name;
 }
+
+console.log(getName(lukeSkywalker));
 
 /**
  * ### Challenge `getFilmCount`
@@ -29,6 +33,8 @@ function getName(character) {
  * Sample data expected output: 5
  */
 function getFilmCount(character) {
+
+
   // TODO: Add your code inside the functions (others below).
 
 }
@@ -41,9 +47,13 @@ function getFilmCount(character) {
  * Return second starship's name from `starships` property.
  * If length is 0. Return 'none'
 */
-function getSecondStarshipName(character) {
-  // TODO: Add your code here.
-}
+// function getSecondStarshipName(character) {
+  
+//     return character.name;
+//   }
+// console.log(getSecondStarshipName);
+
+
 
 /**
  * ### Challenge `getSummary`
