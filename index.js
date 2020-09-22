@@ -5,7 +5,7 @@
 // 👇 COMPLETE YOUR WORK BELOW 👇
 */
 
-const { starships } = require("./data/fixtures-bundle");
+// const { starships } = require("./data/fixtures-bundle");
 
 /**
  * ### Challenge `getName`
@@ -21,8 +21,6 @@ function getName(character) {
   return character.name;
 }
 
-console.log(getName(lukeSkywalker));
-
 /**
  * ### Challenge `getFilmCount`
  * MVP Challenge 🤓
@@ -34,10 +32,8 @@ console.log(getName(lukeSkywalker));
  */
 function getFilmCount(character) {
 
-
-  // TODO: Add your code inside the functions (others below).
-
-}
+  return character.films.length; 
+  }
 
 /**
  * ### Challenge `getSecondStarshipName`
@@ -47,13 +43,10 @@ function getFilmCount(character) {
  * Return second starship's name from `starships` property.
  * If length is 0. Return 'none'
 */
-// function getSecondStarshipName(character) {
+function getSecondStarshipName(character) {
   
-//     return character.name;
-//   }
-// console.log(getSecondStarshipName);
-
-
+    return character.starships[1].name;
+  }
 
 /**
  * ### Challenge `getSummary`
@@ -65,8 +58,11 @@ function getFilmCount(character) {
  *    Result: `Luke Skywalker, 172cm, 77kg. Featured in 5 films.`
  */
 function getSummary(character) {
-  // TODO: Add your code here.
+
+    return `${character.name}, ${character.height}cm, ${character.mass}kg. Featured in ${character.films.length} films.`;
 }
+
+// console.log(getSummary(lukeSkywalker));
 
 /**
  * ### Challenge `getVehiclesCostInCreditsSumTotal`
@@ -77,7 +73,11 @@ function getSummary(character) {
  * Sample data expected output: 8000
 */
 function getVehiclesCostInCreditsSumTotal(character) {
-  // TODO: Add your code here.
+  let vehicleTotal = 0;
+  for (let i = 0; i < character.vehicles.length; i++){
+    vehicleTotal += character.vehicles[i].cost_in_credits;
+  }
+  return vehicleTotal;
 }
 
 /**
@@ -91,8 +91,16 @@ function getVehiclesCostInCreditsSumTotal(character) {
  * Sample data expected output: 27
 */
 function getStarshipPassengerAndCrewSumTotal(character) {
-  // TODO: Add your code here.
+  
+
+  let peopleTotal = 0;
+  for(let i = 0; i < character.starships.length; i++){
+    peopleTotal += character.starships[i].crew + character.starships[i].passengers;
+  }
+  return peopleTotal;
 }
+
+
 
 /**
  * ### Challenge `getNthFilm`
@@ -107,9 +115,15 @@ function getStarshipPassengerAndCrewSumTotal(character) {
  * Given film #1, expected output: `A New Hope`
  * Given film #7, expected error: `There are only 3 Star Wars movies. Flan fiction excluded.`
 */
+
 function getNthFilm(character, filmNumber) {
-  // TODO: Add your code here.
-}
+  if (filmNumber < 4){
+    return character.films[filmNumber - 1];
+  }
+  else {
+    return `There are only 3 Star Wars movies. Flan fiction excluded.`
+  }
+  }
 
 /**
  * ### Challenge `getCargoCapacityTotal`

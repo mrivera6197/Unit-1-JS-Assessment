@@ -31,6 +31,8 @@ and obiWanKenobi
 // Complete Test Data Object (credit: https://SWAPI.co)
 // Side note: Yes Star Wars 🤓 purists. It's a bit out of date. Talk to SWAPI about it.
 // Focus & follow instructions above. 🤖
+
+const array = [
 {
   "name": "Luke Skywalker",
   "height": "172",
@@ -110,6 +112,7 @@ and obiWanKenobi
   "edited": "2014-12-20T21:17:56.891000Z",
   "url": "https://swapi.co/api/people/1/"
 }
+]
 ```
 
 
