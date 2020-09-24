@@ -5,8 +5,6 @@
 // 👇 COMPLETE YOUR WORK BELOW 👇
 */
 
-// const { starships } = require("./data/fixtures-bundle");
-
 /**
  * ### Challenge `getName`
  * Example ✅
@@ -44,8 +42,12 @@ function getFilmCount(character) {
  * If length is 0. Return 'none'
 */
 function getSecondStarshipName(character) {
-  
-    return character.starships[1].name;
+      if(character.starships.length === 0){
+        return "none";
+      }
+      else if(character.starships.length > 0){
+        return character.starships[1].name;
+      }
   }
 
 /**
